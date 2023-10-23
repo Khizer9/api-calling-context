@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className='main-container'>
         <div className='product-list'>
-      {loading ? 'Loading..' : products.map((product) => (
+      {loading ? <div class="lds-ripple"><div></div><div></div></div> : products.map((product) => (
         <div className='product-card' key={product.id}>
           <img className='product-img' src={product.thumbnail} alt={product.title} />
           <h2>{product.title}</h2>
